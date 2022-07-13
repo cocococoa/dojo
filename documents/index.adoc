@@ -13,7 +13,5 @@
 
 include::sample.adoc[leveloffset=+1]
 
-include::bibliography.adoc[leveloffset=+1]
-
 (END OF DOCUMENT)
 

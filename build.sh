@@ -11,7 +11,6 @@ asciidoctor \
   -o $DIST_DIR/index.html \
   -r asciidoctor-diagram \
   -r asciidoctor-mathematical \
-  -r asciidoctor-bibtex \
   -b html \
   $DOCUMENT_DIR/index.adoc
 

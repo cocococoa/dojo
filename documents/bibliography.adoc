@@ -1,5 +1,0 @@
-[[chapter-bibliography]]
-= 参考文献
-
-bibliography::reference.bib[ieee]
-
