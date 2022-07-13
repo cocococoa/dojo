@@ -1,0 +1,19 @@
+= Dojo
+:lang: ja
+:doctype: book
+:toc: left
+:toclevel: 3
+:source-highlighter: highlightjs
+:author: Masaki Ono
+:revdate: 2022/07/13
+:stem: latexmath
+:chapter-label:
+:revnumber: 0.0
+:xrefstyle: full
+
+include::sample.adoc[leveloffset=+1]
+
+include::bibliography.adoc[leveloffset=+1]
+
+(END OF DOCUMENT)
+

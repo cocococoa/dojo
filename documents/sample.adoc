@@ -1,0 +1,5 @@
+[#chapter-sample]
+= サンプル
+
+This is a sample.
+

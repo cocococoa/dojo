@@ -1,0 +1,12 @@
+name: 'asciidoc'
+description: 'build asciidoc'
+inputs:
+  command:
+    description: 'build commands'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
+
