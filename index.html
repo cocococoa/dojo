@@ -448,19 +448,772 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#chapter-sample">サンプル</a></li>
+<li><a href="#chapter-sample">1. サンプル</a></li>
+<li><a href="#chapter-taocp-4A-7-0">2. 7章: 組合せ探索</a>
+<ul class="sectlevel2">
+<li><a href="#_langford配置">2.1. Langford配置</a></li>
+<li><a href="#_直交ラテン方陣">2.2. 直交ラテン方陣</a></li>
+<li><a href="#_英語の5文字単語">2.3. 英語の5文字単語</a></li>
+<li><a href="#_単語で作るグラフ">2.4. 単語で作るグラフ</a></li>
+<li><a href="#_グラフの定義系">2.5. グラフの定義系</a></li>
+<li><a href="#_グラフと有向グラフの表現">2.6. グラフと有向グラフの表現</a></li>
+<li><a href="#_グラフ的な次数列">2.7. グラフ的な次数列</a></li>
+<li><a href="#_グラフの彼方">2.8. グラフの彼方</a></li>
+<li><a href="#_演習">2.9. 演習</a></li>
+</ul>
+</li>
+<li><a href="#chapter-taocp-4A-7-1">3. 7.1. 零と一</a></li>
+<li><a href="#chapter-art-kabuki">4. 歌舞伎</a>
+<ul class="sectlevel2">
+<li><a href="#_俳優">4.1. 俳優</a></li>
+<li><a href="#_作品">4.2. 作品</a></li>
+</ul>
+</li>
+<li><a href="#chapter-art-lesson2">5. まなざしのレッスン ②西洋近現代絵画</a>
+<ul class="sectlevel2">
+<li><a href="#_第0部導入">5.1. 第0部　導入</a></li>
+<li><a href="#_第1部主題とテーマ">5.2. 第1部　主題とテーマ</a></li>
+<li><a href="#_第2部造形と技法">5.3. 第2部　造形と技法</a></li>
+<li><a href="#_第3部受容と枠組み">5.4. 第3部　受容と枠組み</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="chapter-sample">サンプル</h2>
+<h2 id="chapter-sample">1. サンプル</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is a sample.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chapter-taocp-4A-7-0">2. 7章: 組合せ探索</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>存在</p>
+</li>
+<li>
+<p>構成</p>
+</li>
+<li>
+<p>数え上げ</p>
+</li>
+<li>
+<p>生成</p>
+</li>
+<li>
+<p>最適化</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_langford配置">2.1. Langford配置</h3>
+<div class="paragraph">
+<p><span class="image"><img src="images/stem-d3ee8ece6376aa4e8b50d2c011d0d910.png" alt="stem d3ee8ece6376aa4e8b50d2c011d0d910" width="88" height="10"></span> の時にだけ存在することの証明は非常に簡単。
+一方、<span class="image"><img src="images/stem-d3ee8ece6376aa4e8b50d2c011d0d910.png" alt="stem d3ee8ece6376aa4e8b50d2c011d0d910" width="88" height="10"></span> の時にLangford配置が存在することの証明は難しいが、実際に構成すればよい。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://user-images.githubusercontent.com/47590231/116976575-51db6180-acfc-11eb-8eaa-0603b365d8bf.png" alt="116976575 51db6180 acfc 11eb 8eaa 0603b365d8bf">
+</div>
+<div class="title">Figure 1. Langford</div>
+</div>
+<div class="paragraph">
+<p>Langford配置の問題は完全被覆問題に帰着できるらしい。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/stem-d884595d37d0b1b135ceec467be5c324.png" alt="stem d884595d37d0b1b135ceec467be5c324" width="30" height="8"></span> の場合</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>1</code> の置ける場所: (1, 3), (2, 4), (3, 5), (4, 6), (5, 7), (6, 8) から一つ選ぶ</p>
+</li>
+<li>
+<p><code>2</code> の置ける場所: (1, 4), (2, 5), (3, 6), (4, 7), (5, 8) から一つ選ぶ</p>
+</li>
+<li>
+<p><code>3</code> の置ける場所: (1, 5), (2, 6), (3, 7), (4, 8) から一つ選ぶ</p>
+</li>
+<li>
+<p><code>4</code> の置ける場所: (1, 6), (2, 7), (3, 8) から一つ選ぶ</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>上の <span class="image"><img src="images/stem-1323fb3c35aeeb71cf36c473dcf29daa.png" alt="stem 1323fb3c35aeeb71cf36c473dcf29daa" width="183" height="17"></span> 個の完全被覆問題となるのだろうか？</p>
+</div>
+<div class="paragraph">
+<p>そして、完全被覆問題はdancing linksで効率的に全探索できるので、「均衡したLangford配置」「最小幅Langford配置」「均衡を欠くLangford配置」等を見つけることができる。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_直交ラテン方陣">2.2. 直交ラテン方陣</h3>
+<div class="paragraph">
+<p>横断を見つけるというアイディアは面白かった。
+実装してみた: <a href="https://github.com/cocococoa/puzzle" class="bare">https://github.com/cocococoa/puzzle</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_英語の5文字単語">2.3. 英語の5文字単語</h3>
+<div class="paragraph">
+<p>sgb-words.txt の紹介</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_単語で作るグラフ">2.4. 単語で作るグラフ</h3>
+<div class="paragraph">
+<p>Caroll風のグラフの作り方。そのほかいろいろな方法でのグラフの作り方。
+どれも楽しい。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_グラフの定義系">2.5. グラフの定義系</h3>
+<div class="paragraph">
+<p>(略)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_グラフと有向グラフの表現">2.6. グラフと有向グラフの表現</h3>
+<div class="paragraph">
+<p>位数: <span class="image"><img src="images/stem-55a049b8f161ae7cfeb0197d75aff967.png" alt="stem 55a049b8f161ae7cfeb0197d75aff967" width="7" height="6"></span>、サイズ: <span class="image"><img src="images/stem-0e51a2dede42189d77627c4d742822c3.png" alt="stem 0e51a2dede42189d77627c4d742822c3" width="11" height="6"></span> のSGB有向グラフ</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="images/stem-55a049b8f161ae7cfeb0197d75aff967.png" alt="stem 55a049b8f161ae7cfeb0197d75aff967" width="7" height="6"></span> 個の頂点節点の逐次配列</p>
+</li>
+<li>
+<p>頂点 <span class="image"><img src="images/stem-63bb9849783d01d91403bc9a5fea12a2.png" alt="stem 63bb9849783d01d91403bc9a5fea12a2" width="7" height="9"></span> (<span class="image"><img src="images/stem-2ee300ad15af6090a9a8bf0c34598bf4.png" alt="stem 2ee300ad15af6090a9a8bf0c34598bf4" width="53" height="9"></span>) へのアクセスが容易</p>
+</li>
+<li>
+<p>32 byte</p>
+</li>
+<li>
+<p>標準フィールド</p>
+</li>
+<li>
+<p><code>NAME</code></p>
+</li>
+<li>
+<p><code>ARCS</code>: <code>v</code> から出発する各弧の一重にリンクしたリスト (サイズ: <span class="image"><img src="images/stem-9cb6d76e773b3db90b30ea467147d132.png" alt="stem 9cb6d76e773b3db90b30ea467147d132" width="30" height="12"></span>)  の先頭の弧節点</p>
+</li>
+<li>
+<p><span class="image"><img src="images/stem-0e51a2dede42189d77627c4d742822c3.png" alt="stem 0e51a2dede42189d77627c4d742822c3" width="11" height="6"></span> 個の弧の節点はリンク</p>
+</li>
+<li>
+<p>20 byte</p>
+</li>
+<li>
+<p>フィールド</p>
+</li>
+<li>
+<p><code>TIP</code>: 弧の先端を表す頂点節点</p>
+</li>
+<li>
+<p><code>NEXT</code>: 同じ始点をもつ次の弧を表す弧節点</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_グラフ的な次数列">2.7. グラフ的な次数列</h3>
+<div class="paragraph">
+<p><code>majorize</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_グラフの彼方">2.8. グラフの彼方</h3>
+<div class="paragraph">
+<p>グラフに追加情報→ネットワーク</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_演習">2.9. 演習</h3>
+<div class="sect3">
+<h4 id="_問3">2.9.1. 問3</h4>
+<div class="paragraph">
+<p>理論は分からないが実装して探索してみると、たくさんあるらしい。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wandbox.org/permlink/2o7OZGVzvj5dYEHr" class="bare">https://wandbox.org/permlink/2o7OZGVzvj5dYEHr</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_問8">2.9.2. 問8</h4>
+<div class="paragraph">
+<p>Langford対が平面的かどうか判定するアルゴリズムさえ実装すればよい。
+&#8230;&#8203;わからん。。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_問9">2.9.3. 問9</h4>
+<div class="paragraph">
+<p>結構簡単に見つかった。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wandbox.org/permlink/ysFWwtJUeGPQ1X0s" class="bare">https://wandbox.org/permlink/ysFWwtJUeGPQ1X0s</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_問13">2.9.4. 問13</h4>
+<div class="paragraph">
+<p>全くわからん。。。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_問14">2.9.5. 問14</h4>
+<div class="paragraph">
+<p>ラテン方陣を発見するプログラムを実装した。ただ、実行速度が残念で、(e)の直交相手は見つけられなかった。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/cocococoa/puzzle" class="bare">https://github.com/cocococoa/puzzle</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chapter-taocp-4A-7-1">3. 7.1. 零と一</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+empty
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chapter-art-kabuki">4. 歌舞伎</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_俳優">4.1. 俳優</h3>
+<div class="sect3">
+<h4 id="_片岡仁左衛門">4.1.1. 片岡仁左衛門</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>15代目</p>
+</li>
+<li>
+<p>家族</p>
+<div class="ulist">
+<ul>
+<li>
+<p>父: 13代目片岡仁左衛門</p>
+</li>
+<li>
+<p>兄弟</p>
+<div class="ulist">
+<ul>
+<li>
+<p>5代目片岡我當</p>
+</li>
+<li>
+<p>2代目片岡秀太郎</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>子</p>
+<div class="ulist">
+<ul>
+<li>
+<p>片岡孝太郎</p>
+<div class="ulist">
+<ul>
+<li>
+<p>子</p>
+<div class="ulist">
+<ul>
+<li>
+<p>片岡千之助</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_坂東玉三郎">4.1.2. 坂東玉三郎</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>5代目</p>
+</li>
+<li>
+<p>家族</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(義)父: 14代目守田勘彌 (4代目玉三郎)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_中村勘九郎">4.1.3. 中村勘九郎</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>6代目</p>
+<div class="ulist">
+<ul>
+<li>
+<p>曽祖父</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3代目歌六</p>
+</li>
+<li>
+<p>6代目菊五郎</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>祖父</p>
+<div class="ulist">
+<ul>
+<li>
+<p>17代目勘三郎</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>父: 18代目勘三郎</p>
+</li>
+<li>
+<p>兄弟: 2代目七之助</p>
+</li>
+<li>
+<p>子</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3代目勘太郎</p>
+</li>
+<li>
+<p>2代目長三郎</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_中村七之助">4.1.4. 中村七之助</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>2代目</p>
+</li>
+<li>
+<p>6代目勘九郎の兄弟(弟)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_中村歌六">4.1.5. 中村歌六</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>5代目</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_中村梅玉">4.1.6. 中村梅玉</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>4代目</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_中村時蔵">4.1.7. 中村時蔵</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>5代目</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_尾上菊之助">4.1.8. 尾上菊之助</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>5代目</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_作品">4.2. 作品</h3>
+<div class="sect3">
+<h4 id="_義経千本桜">4.2.1. 義経千本桜</h4>
+<div class="sect4">
+<h5 id="_二段目_渡海屋大物浦の段">二段目 渡海屋・大物浦の段</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>九州へ逃れようとする義経一行は、大物浦の船問屋・渡海屋で、数日来の雨に足止めを余儀なくされている</p>
+</li>
+<li>
+<p>北条の家来・相模五郎は義経一行捜索のため、船を出せと強硬に迫る</p>
+</li>
+<li>
+<p>主人の銀平が五郎を追い返す</p>
+</li>
+<li>
+<p>義経は銀平の働きに感謝し、雨の晴れ間に乗船場へと急ぐ</p>
+</li>
+<li>
+<p>義経一行の出発が迫る時刻、銀平は「桓武天皇九代の後胤。平知盛幽霊なり（かんむてんのうくだいのこういん。たいらのとももりゆうれいなり）」と名乗り、鎧に身を固めた姿で現れた</p>
+</li>
+<li>
+<p>渡海屋銀平は実は平知盛だった</p>
+<div class="ulist">
+<ul>
+<li>
+<p>娘のお安は安徳天皇、女房のおりうは典侍局(乳母)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>西海で没した知盛の幽霊が義経を討つのだと、出陣した</p>
+</li>
+<li>
+<p>安徳天皇と典侍局は知盛側の全滅を聞き、入水する覚悟を決める</p>
+</li>
+<li>
+<p>義経がこれを制する</p>
+</li>
+<li>
+<p>鎧に血を染めた知盛が帝を抱いた義経に勝負を挑む</p>
+</li>
+<li>
+<p>義経は知盛を称え、帝の守護を誓う</p>
+</li>
+<li>
+<p>帝は義経に感謝し、知盛をねぎらう</p>
+</li>
+<li>
+<p>局は義経に後を託し自害する</p>
+</li>
+<li>
+<p>知盛は大碇を背負い、渦巻く海中に消えていく</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Watch</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2/19(土) 二月大歌舞伎</p>
+<div class="ulist">
+<ul>
+<li>
+<p>知盛: 片岡仁左衛門</p>
+<div class="ulist">
+<ul>
+<li>
+<p>典侍局: 片岡孝太郎</p>
+</li>
+<li>
+<p>帝: 小川大晴</p>
+</li>
+<li>
+<p>相模五郎: 中村又五郎</p>
+</li>
+<li>
+<p>入江丹蔵: 中村隼人</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>義経: 中村時蔵</p>
+<div class="ulist">
+<ul>
+<li>
+<p>弁慶: 市川左團次</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_春調娘七草">4.2.2. 春調娘七草</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>曽我の五郎・十郎の兄弟に静御前をからめたものが「娘七種」である</p>
+</li>
+<li>
+<p>まず静の踊りがあり、扇を軍配に見立てて行司になり、十郎と五郎の丹前振りから相撲を取る様を見せる</p>
+</li>
+<li>
+<p>そこで兄弟が敵の工藤を討つ意気を見せるのを静が止める</p>
+</li>
+<li>
+<p>その後手踊りがあり、静が俎板を出し七草をすり粉木で叩くのに、十郎・五郎も大小鼓を打ち合わせ、この三人の呼吸の合った打ち方が見どころとなっている</p>
+</li>
+<li>
+<p>最後に二人がまた勇み立つのを静が押さえ、三人三様の見得で幕となる</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Watch</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2/19(土) 二月大歌舞伎</p>
+<div class="ulist">
+<ul>
+<li>
+<p>曾我十郎: 中村梅枝</p>
+</li>
+<li>
+<p>静御前: 片岡千之助</p>
+</li>
+<li>
+<p>曾我五郎: 中村萬太郎</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chapter-art-lesson2">5. まなざしのレッスン ②西洋近現代絵画</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_第0部導入">5.1. 第0部　導入</h3>
+<div class="sect3">
+<h4 id="_第1章西洋近現代絵画をいかに見るか">5.1.1. 第1章　西洋近現代絵画をいかに見るか</h4>
+<div class="paragraph">
+<p>19世紀から現在にいたる西洋絵画は、伝統的な絵画とはまったく異なっている。
+約束事が存在した世界から、約束事が崩壊していく世界へと変わっていく。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>物語画(歴史画)を中心とするヒエラルキー</p>
+</li>
+<li>
+<p>高貴な物語的主題(神話、宗教、寓意、古代史)にはそれにふさわしい表現様式</p>
+<div class="ulist">
+<ul>
+<li>
+<p>奥行きのある空間表現</p>
+</li>
+<li>
+<p>モチーフの構成と配置</p>
+</li>
+<li>
+<p>デッサンと明暗中心の立体的な対象把握</p>
+</li>
+<li>
+<p>身ぶりや表情による感情表現</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>現実に即した副次的な主題(肖像、風景、風俗、静物)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Intervention_of_the_Sabine_Women.jpg" alt="The Intervention of the Sabine Women">
+</div>
+<div class="title">Figure 2. ダヴィッド《サビニの女たち》1799年 &#8230;&#8203; 典型的な歴史画</div>
+</div>
+<div class="sect4">
+<h5 id="_近代絵画の価値観_ボードレールの美術批評">近代絵画の価値観 --- ボードレールの美術批評</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>伝統的な西洋絵画</p>
+<div class="ulist">
+<ul>
+<li>
+<p>唯一無二の客観的な理想美</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>西洋近現代絵画</p>
+<div class="ulist">
+<ul>
+<li>
+<p>主観的、内面的な感受性の尊重</p>
+</li>
+<li>
+<p>現代にふさわしい斬新さの追及</p>
+</li>
+<li>
+<p>色彩の重視</p>
+</li>
+<li>
+<p>超越性や無限への志向</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_主題と様式の急速な変貌">主題と様式の急速な変貌</h5>
+<div class="imageblock">
+<div class="content">
+<img src="https://www.musey.net/wp-content/uploads/2014/08/image-6.jpg" alt="image 6">
+</div>
+<div class="title">Figure 3. フランシスコ・デ・ゴヤ《1808年5月3日、プリンシペ・ピオの丘での銃殺》1814年 &#8230;&#8203; 表現様式は伝統を踏襲しているものの、主題は近代的</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://www.musey.net/wp-content/uploads/2014/08/image-111.jpg" alt="image 111">
+</div>
+<div class="title">Figure 4. ピカソ《ゲルニカ》1937年 &#8230;&#8203; 近現代西洋絵画の斬新さ</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://www.musey.net/wp-content/uploads/2018/10/800px-Jean_Auguste_Dominique_Ingres_La_Grande_Odalisque_1814.jpg" alt="800px Jean Auguste Dominique Ingres La Grande Odalisque 1814">
+</div>
+<div class="title">Figure 5. アングル《グランド・オダリスク》1814年</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://www.musey.net/wp-content/uploads/2018/04/family.jpg" alt="family">
+</div>
+<div class="title">Figure 6. シーレ《家族》1918年</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_受容の枠組みの変化">受容の枠組みの変化</h5>
+<div class="paragraph">
+<p>作品の受容のレベルは作品の制作の問題と深くかかわっている。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>伝統</p>
+<div class="ulist">
+<ul>
+<li>
+<p>パトロンからの注文</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>近現代</p>
+<div class="ulist">
+<ul>
+<li>
+<p>不特定多数の公衆の購入</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_第1部主題とテーマ">5.2. 第1部　主題とテーマ</h3>
+<div class="sect3">
+<h4 id="_第2章物語表現の変容">5.2.1. 第2章　物語表現の変容</h4>
+<div class="paragraph">
+<p>伝統的な高貴なジャンルがいかに変容していったのかを検討する。</p>
+</div>
+<div class="sect4">
+<h5 id="_物語画歴史画と同時代性">物語画（歴史画）と同時代性</h5>
+
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_第2部造形と技法">5.3. 第2部　造形と技法</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_第3部受容と枠組み">5.4. 第3部　受容と枠組み</h3>
 <div class="paragraph">
 <p>(END OF DOCUMENT)</p>
+</div>
 </div>
 </div>
 </div>
@@ -468,7 +1221,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
 Version 0.0<br>
-Last updated 2022-07-13 13:36:25 UTC
+Last updated 2022-07-13 14:44:01 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
