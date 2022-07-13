@@ -3,15 +3,27 @@
 :doctype: book
 :toc: left
 :toclevel: 3
+:sectnums:
+:sectnumlevels: 3
+:scripts: cjk
 :source-highlighter: highlightjs
-:author: Masaki Ono
-:revdate: 2022/07/13
 :stem: latexmath
 :chapter-label:
 :revnumber: 0.0
 :xrefstyle: full
+:imagesdir: images/
+:author: Masaki Ono
+:revdate: 2022/07/13
 
 include::sample.adoc[leveloffset=+1]
+
+include::taocp/7-0.adoc[leveloffset=+1]
+
+include::taocp/7-1.adoc[leveloffset=+1]
+
+include::art/kabuki.adoc[leveloffset=+1]
+
+include::art/lesson2.adoc[leveloffset=+1]
 
 (END OF DOCUMENT)
 
