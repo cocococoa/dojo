@@ -11,7 +11,7 @@
 :chapter-label:
 :revnumber: 0.0
 :xrefstyle: full
-:imagesdir: images/
+:imagesdir: _images/
 :author: Masaki Ono
 :revdate: 2022/07/13
 
