@@ -17,6 +17,8 @@
 
 include::sample.adoc[leveloffset=+1]
 
+include::algo/sort.adoc[leveloffset=+1]
+
 include::taocp/7-0.adoc[leveloffset=+1]
 
 include::taocp/7-1.adoc[leveloffset=+1]
