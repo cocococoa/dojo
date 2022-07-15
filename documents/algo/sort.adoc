@@ -7,7 +7,7 @@
 
 * Ref
 ** https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Szekeres_theorem[Wikipedia]
-** http://www.numdam.org/static/ptf/img/pdf.gif[A combinatorial problem in geometry]
+** http://www.numdam.org/item/CM_1935__2__463_0.pdf[A combinatorial problem in geometry]
 ** http://www-stat.wharton.upenn.edu/~steele/Publications/PDF/VOTMSTOEAS.pdf[Variations on the monotone subsequence theme of Erdős and Szekeres]
 
 Statement:: 
