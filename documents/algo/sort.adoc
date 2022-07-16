@@ -17,8 +17,8 @@ stem:[Max(I_N, D_N) \ge \sqrt{N}] である。
 
 Proof 1::
 簡単のため、 stem:[N] は平方数と仮定する。
-以下のような集合 stem:[K_i] stem:[(i=1, \dots, N)] を定義する。
-stem:[K_i = \{k | a_k \text{で終わる最長の増加部分列の長さが} i\}]
+以下のような集合 stem:[K_i] stem:[(i=1, \dots, N)] を定義する。 +
+stem:[K_i = \{k | a_k \text{で終わる最長の増加部分列の長さが} i\}] +
 背理法で証明する。
 stem:[I_N < \sqrt{N}] と仮定する。
 stem:[K_i] は以下の性質を持つ。
