@@ -1,7 +1,0 @@
-[#sample]
-= Sample
-
-This is a sample.
-
-.岡本太郎 「樹人」1971年 彫刻の森
-image::taro.jpg[]

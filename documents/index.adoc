@@ -15,12 +15,13 @@
 :revnumber: 0.0
 :revdate: 2022/07/16
 
-include::sample.adoc[leveloffset=+1]
+include::algo/_algo.adoc[leveloffset=+1]
 
-include::algo/algo.adoc[leveloffset=+1]
+include::taocp/_taocp.adoc[leveloffset=+1]
 
-include::taocp/taocp.adoc[leveloffset=+1]
+include::art/_art.adoc[leveloffset=+1]
 
-include::art/art.adoc[leveloffset=+1]
+.岡本太郎 「樹人」1971年 彫刻の森
+image::taro.jpg[]
 
 (END OF DOCUMENT)
