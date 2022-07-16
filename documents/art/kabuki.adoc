@@ -1,4 +1,4 @@
-[#chapter-art-kabuki]
+[#art-kabuki]
 = 歌舞伎
 
 == 俳優

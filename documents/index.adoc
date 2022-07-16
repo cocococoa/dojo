@@ -9,23 +9,18 @@
 :source-highlighter: highlightjs
 :stem: latexmath
 :chapter-label:
-:revnumber: 0.0
 :xrefstyle: full
 :imagesdir: _images/
 :author: Masaki Ono
-:revdate: 2022/07/13
+:revnumber: 0.0
+:revdate: 2022/07/16
 
 include::sample.adoc[leveloffset=+1]
 
-include::algo/sort.adoc[leveloffset=+1]
+include::algo/algo.adoc[leveloffset=+1]
 
-include::taocp/7-0.adoc[leveloffset=+1]
+include::taocp/taocp.adoc[leveloffset=+1]
 
-include::taocp/7-1.adoc[leveloffset=+1]
-
-include::art/kabuki.adoc[leveloffset=+1]
-
-include::art/lesson2.adoc[leveloffset=+1]
+include::art/art.adoc[leveloffset=+1]
 
 (END OF DOCUMENT)
-

@@ -1,5 +1,4 @@
-[#chapter-taocp-4A-7-1]
-# 7.1. 零と一
+[#taocp-4A-7-1]
+# 零と一
 
 TIP: empty
-

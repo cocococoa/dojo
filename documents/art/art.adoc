@@ -1,0 +1,6 @@
+[#art]
+= Art
+
+include::kabuki.adoc[leveloffset=+1]
+
+include::lesson2.adoc[leveloffset=+1]

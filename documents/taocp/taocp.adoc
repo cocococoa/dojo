@@ -1,0 +1,8 @@
+[#taocp]
+= The Art of Computer Programming
+
+include::5-2.adoc[leveloffset=+1]
+
+include::7-0.adoc[leveloffset=+1]
+
+include::7-1.adoc[leveloffset=+1]

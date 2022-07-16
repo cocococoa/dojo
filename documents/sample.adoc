@@ -1,4 +1,4 @@
-[#chapter-sample]
+[#sample]
 = サンプル
 
 This is a sample.

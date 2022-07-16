@@ -1,4 +1,4 @@
-[#chapter-art-lesson2]
+[#art-lesson2]
 = まなざしのレッスン ②西洋近現代絵画
 
 == 第0部　導入
@@ -63,4 +63,3 @@ image::https://www.musey.net/wp-content/uploads/2018/04/family.jpg[]
 == 第2部　造形と技法
 
 == 第3部　受容と枠組み
-
