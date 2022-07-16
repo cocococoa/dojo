@@ -13,5 +13,10 @@ asciidoctor \
   -r asciidoctor-mathematical \
   -b html5 \
   $DOCUMENT_DIR/index.adoc
+files=(`ls -1 $DIST_DIR/*.html`)
+for file_name in "${files[@]}"; do
+  echo $file_name
+  sed -i -e "s/^#header,#content,#footnotes,#footer\(.*\);max-width:62.5em;\(.*\)/#header,#content,#footnotes,#footer\1;max-width:90%;\2/g" $file_name
+done
 
 cp -r $DOCUMENT_DIR/_images/* $DIST_DIR/_images/
