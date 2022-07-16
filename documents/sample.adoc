@@ -1,5 +1,5 @@
 [#sample]
-= サンプル
+= Sample
 
 This is a sample.
 
