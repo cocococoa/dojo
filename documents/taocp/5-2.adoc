@@ -1,6 +1,14 @@
 [#taocp-4A-5-2]
 = 内部ソート
 
+. 挿入ソート
+. 交換ソート
+. 選択ソート
+. 数え上げソート
+. 特別な目的別のソート
+. 怠け者の方法
+. 新しい優れたソート手法
+
 == 挿入ソート
 
 ソート対象レコードはINPUT+1からINPUT+Nまでの領域に格納してある。
@@ -56,10 +64,17 @@ A_n = \lfloor n/2 \rfloor 2^{n-2}
 
 [latexmath]
 ++++
-\lfloor n/2 \rfloow 2^{n-2} / \binom{n}{\lfloor n/2 \rfloor} \approx 0.15 n^{3/2}
+\lfloor n/2 \rfloor 2^{n-2} / \binom{n}{\lfloor n/2 \rfloor} \approx 0.15 n^{3/2}
 ++++
 
 定理H::
   stem:[\{1, \dots, n\}] の stem:[h] ソート済み順列に含む逆転の平均は、
   stem:[1 = \lfloor n / h \rfloor] で stem:[r = n mod h] とすると、次のようになる。 +
-  stem:[f(n, h) = \frac{2^{2q-1}q!q!}{(2q+1)!} (\binom{h}{2}q(q+1) + binom{r}{2} (q+1) - \frac{1}{2}\binom{h-r}{2}q)]
+  stem:[f(n, h) = \frac{2^{2q-1}q!q!}{(2q+1)!} (\binom{h}{2}q(q+1) + \binom{r}{2} (q+1) - \frac{1}{2}\binom{h-r}{2}q)]
+
+== リスト挿入
+
+直接挿入は次の二つの基本操作を含んでいる
+
+* 与えられたキー以下で最大のキーを見つけるために、ソート済みファイルを操作する
+* ソート済みファイルの指定した位置に新しいレコードを挿入する
