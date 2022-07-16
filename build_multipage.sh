@@ -14,4 +14,5 @@ asciidoctor \
   -r asciidoctor-multipage \
   -b multipage_html5 \
   $DOCUMENT_DIR/index.adoc
+
 cp -r $DOCUMENT_DIR/_images/* $DIST_DIR/_images/
