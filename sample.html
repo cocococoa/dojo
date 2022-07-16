@@ -442,262 +442,51 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="chapter-taocp-4A-7-0" class="book toc2 toc-left">
+<body id="sample" class="book toc2 toc-left">
 <div id="header">
 <h1>Dojo</h1>
 <div class="details">
 <span id="author" class="author">Masaki Ono</span><br>
 <span id="revnumber">version 0.0,</span>
-<span id="revdate">2022/07/13</span>
+<span id="revdate">2022/07/16</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <p><span class="toc-root"><a href="index.html">Dojo</a></span></p><ul class="sectlevel1">
-<li><a href="chapter-sample.html">1. サンプル</a>
+<li><a href="sample.html"><span class="toc-current">1. サンプル</span></a>
 </li>
-<li><a href="chapter-algo-sort.html">2. ソート</a>
+<li><a href="algo.html">2. Algorithm</a>
 </li>
-<li><a href="chapter-taocp-4A-7-0.html"><span class="toc-current">3. 7章: 組合せ探索</span></a>
-<ul class="sectlevel2">
-<li><a href="chapter-taocp-4A-7-0.html#_langford配置">3.1. Langford配置</a>
+<li><a href="taocp.html">3. The Art of Computer Programming</a>
 </li>
-<li><a href="chapter-taocp-4A-7-0.html#_直交ラテン方陣">3.2. 直交ラテン方陣</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_英語の5文字単語">3.3. 英語の5文字単語</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_単語で作るグラフ">3.4. 単語で作るグラフ</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_グラフの定義系">3.5. グラフの定義系</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_グラフと有向グラフの表現">3.6. グラフと有向グラフの表現</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_グラフ的な次数列">3.7. グラフ的な次数列</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_グラフの彼方">3.8. グラフの彼方</a>
-</li>
-<li><a href="chapter-taocp-4A-7-0.html#_演習">3.9. 演習</a>
-</li>
-</ul>
-</li>
-<li><a href="chapter-taocp-4A-7-1.html">4. 7.1. 零と一</a>
-</li>
-<li><a href="chapter-art-kabuki.html">5. 歌舞伎</a>
-</li>
-<li><a href="chapter-art-lesson2.html">6. まなざしのレッスン ②西洋近現代絵画</a>
+<li><a href="art.html">4. Art</a>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="chapter-taocp-4A-7-0">3. 7章: 組合せ探索</h2>
+<h2 id="sample">1. サンプル</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>存在</p>
-</li>
-<li>
-<p>構成</p>
-</li>
-<li>
-<p>数え上げ</p>
-</li>
-<li>
-<p>生成</p>
-</li>
-<li>
-<p>最適化</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_langford配置">3.1. Langford配置</h3>
 <div class="paragraph">
-<p><span class="image"><img src="_images/stem-d3ee8ece6376aa4e8b50d2c011d0d910.png" alt="stem d3ee8ece6376aa4e8b50d2c011d0d910" width="88" height="10"></span> の時にだけ存在することの証明は非常に簡単。
-一方、<span class="image"><img src="_images/stem-d3ee8ece6376aa4e8b50d2c011d0d910.png" alt="stem d3ee8ece6376aa4e8b50d2c011d0d910" width="88" height="10"></span> の時にLangford配置が存在することの証明は難しいが、実際に構成すればよい。</p>
+<p>This is a sample.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://user-images.githubusercontent.com/47590231/116976575-51db6180-acfc-11eb-8eaa-0603b365d8bf.png" alt="116976575 51db6180 acfc 11eb 8eaa 0603b365d8bf">
+<img src="_images/taro.jpg" alt="taro">
 </div>
-<div class="title">Figure 2. Langford</div>
-</div>
-<div class="paragraph">
-<p>Langford配置の問題は完全被覆問題に帰着できるらしい。</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/stem-d884595d37d0b1b135ceec467be5c324.png" alt="stem d884595d37d0b1b135ceec467be5c324" width="30" height="8"></span> の場合</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>1</code> の置ける場所: (1, 3), (2, 4), (3, 5), (4, 6), (5, 7), (6, 8) から一つ選ぶ</p>
-</li>
-<li>
-<p><code>2</code> の置ける場所: (1, 4), (2, 5), (3, 6), (4, 7), (5, 8) から一つ選ぶ</p>
-</li>
-<li>
-<p><code>3</code> の置ける場所: (1, 5), (2, 6), (3, 7), (4, 8) から一つ選ぶ</p>
-</li>
-<li>
-<p><code>4</code> の置ける場所: (1, 6), (2, 7), (3, 8) から一つ選ぶ</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>上の <span class="image"><img src="_images/stem-1323fb3c35aeeb71cf36c473dcf29daa.png" alt="stem 1323fb3c35aeeb71cf36c473dcf29daa" width="183" height="17"></span> 個の完全被覆問題となるのだろうか？</p>
-</div>
-<div class="paragraph">
-<p>そして、完全被覆問題はdancing linksで効率的に全探索できるので、「均衡したLangford配置」「最小幅Langford配置」「均衡を欠くLangford配置」等を見つけることができる。</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_直交ラテン方陣">3.2. 直交ラテン方陣</h3>
-<div class="paragraph">
-<p>横断を見つけるというアイディアは面白かった。
-実装してみた: <a href="https://github.com/cocococoa/puzzle" class="bare">https://github.com/cocococoa/puzzle</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_英語の5文字単語">3.3. 英語の5文字単語</h3>
-<div class="paragraph">
-<p>sgb-words.txt の紹介</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_単語で作るグラフ">3.4. 単語で作るグラフ</h3>
-<div class="paragraph">
-<p>Caroll風のグラフの作り方。そのほかいろいろな方法でのグラフの作り方。
-どれも楽しい。</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_グラフの定義系">3.5. グラフの定義系</h3>
-<div class="paragraph">
-<p>(略)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_グラフと有向グラフの表現">3.6. グラフと有向グラフの表現</h3>
-<div class="paragraph">
-<p>位数: <span class="image"><img src="_images/stem-55a049b8f161ae7cfeb0197d75aff967.png" alt="stem 55a049b8f161ae7cfeb0197d75aff967" width="7" height="6"></span>、サイズ: <span class="image"><img src="_images/stem-0e51a2dede42189d77627c4d742822c3.png" alt="stem 0e51a2dede42189d77627c4d742822c3" width="11" height="6"></span> のSGB有向グラフ</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="image"><img src="_images/stem-55a049b8f161ae7cfeb0197d75aff967.png" alt="stem 55a049b8f161ae7cfeb0197d75aff967" width="7" height="6"></span> 個の頂点節点の逐次配列</p>
-</li>
-<li>
-<p>頂点 <span class="image"><img src="_images/stem-63bb9849783d01d91403bc9a5fea12a2.png" alt="stem 63bb9849783d01d91403bc9a5fea12a2" width="7" height="9"></span> (<span class="image"><img src="_images/stem-2ee300ad15af6090a9a8bf0c34598bf4.png" alt="stem 2ee300ad15af6090a9a8bf0c34598bf4" width="53" height="9"></span>) へのアクセスが容易</p>
-</li>
-<li>
-<p>32 byte</p>
-</li>
-<li>
-<p>標準フィールド</p>
-</li>
-<li>
-<p><code>NAME</code></p>
-</li>
-<li>
-<p><code>ARCS</code>: <code>v</code> から出発する各弧の一重にリンクしたリスト (サイズ: <span class="image"><img src="_images/stem-9cb6d76e773b3db90b30ea467147d132.png" alt="stem 9cb6d76e773b3db90b30ea467147d132" width="30" height="12"></span>)  の先頭の弧節点</p>
-</li>
-<li>
-<p><span class="image"><img src="_images/stem-0e51a2dede42189d77627c4d742822c3.png" alt="stem 0e51a2dede42189d77627c4d742822c3" width="11" height="6"></span> 個の弧の節点はリンク</p>
-</li>
-<li>
-<p>20 byte</p>
-</li>
-<li>
-<p>フィールド</p>
-</li>
-<li>
-<p><code>TIP</code>: 弧の先端を表す頂点節点</p>
-</li>
-<li>
-<p><code>NEXT</code>: 同じ始点をもつ次の弧を表す弧節点</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_グラフ的な次数列">3.7. グラフ的な次数列</h3>
-<div class="paragraph">
-<p><code>majorize</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_グラフの彼方">3.8. グラフの彼方</h3>
-<div class="paragraph">
-<p>グラフに追加情報→ネットワーク</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_演習">3.9. 演習</h3>
-<div class="sect3">
-<h4 id="_問3">3.9.1. 問3</h4>
-<div class="paragraph">
-<p>理論は分からないが実装して探索してみると、たくさんあるらしい。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://wandbox.org/permlink/2o7OZGVzvj5dYEHr" class="bare">https://wandbox.org/permlink/2o7OZGVzvj5dYEHr</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_問8">3.9.2. 問8</h4>
-<div class="paragraph">
-<p>Langford対が平面的かどうか判定するアルゴリズムさえ実装すればよい。
-&#8230;&#8203;わからん。。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_問9">3.9.3. 問9</h4>
-<div class="paragraph">
-<p>結構簡単に見つかった。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://wandbox.org/permlink/ysFWwtJUeGPQ1X0s" class="bare">https://wandbox.org/permlink/ysFWwtJUeGPQ1X0s</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_問13">3.9.4. 問13</h4>
-<div class="paragraph">
-<p>全くわからん。。。</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_問14">3.9.5. 問14</h4>
-<div class="paragraph">
-<p>ラテン方陣を発見するプログラムを実装した。ただ、実行速度が残念で、(e)の直交相手は見つけられなかった。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/cocococoa/puzzle" class="bare">https://github.com/cocococoa/puzzle</a></p>
-</li>
-</ul>
-</div>
-</div>
+<div class="title">Figure 1. 岡本太郎 「樹人」1971年 彫刻の森</div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="chapter-algo-sort.html">ソート</a> | ↑ Up: <a href="index.html">Dojo</a> | Next: <a href="chapter-taocp-4A-7-1.html">7.1. 零と一</a> →</p>
+<p>↑ Up: <a href="index.html">Dojo</a> | Next: <a href="algo.html">Algorithm</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.0<br>
-Last updated 2022-07-16 08:02:49 UTC
+Last updated 2022-07-16 08:18:32 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
