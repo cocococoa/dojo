@@ -11,31 +11,31 @@
 ** http://www-stat.wharton.upenn.edu/~steele/Publications/PDF/VOTMSTOEAS.pdf[Variations on the monotone subsequence theme of Erdős and Szekeres]
 
 Statement:: 
-stem:[1, \dots, N] の整数の順列 stem:[a_1, \dots, a_N] の最長増加部分列の長さを stem:[I_N] 、
-最長減少部分列の長さを stem:[D_N] とする。
-stem:[Max(I_N, D_N) \ge \sqrt{N}] である。
+  stem:[1, \dots, N] の整数の順列 stem:[a_1, \dots, a_N] の最長増加部分列の長さを stem:[I_N] 、
+  最長減少部分列の長さを stem:[D_N] とする。
+  stem:[Max(I_N, D_N) \ge \sqrt{N}] である。
 
 Proof 1::
-簡単のため、 stem:[N] は平方数と仮定する。
-以下のような集合 stem:[K_i] stem:[(i=1, \dots, N)] を定義する。 +
-stem:[K_i = \{k | a_k \text{で終わる最長の増加部分列の長さが} i\}] +
-背理法で証明する。
-stem:[I_N < \sqrt{N}] と仮定する。
-stem:[K_i] は以下の性質を持つ。
-. stem:[1] から stem:[N] までの数はいずれかの stem:[K_i] に含まれる
-. stem:[i\neq j] なら stem:[K_i \cap K_j = \phi]
-. stem:[K_{\sqrt{N}}, K_{\sqrt{N}+1}, \dots = \phi] +
-この時、stem:[K_1, \dots, K_{sqrt{N}-1}] のうち、
-元の数が stem:[\sqrt{N}] 以上の集合が存在する。
-この集合の元を集めると、
-長さが stem:[\sqrt{N}] 以上の減少部分列が得られる。
+  簡単のため、 stem:[N] は平方数と仮定する。
+  以下のような集合 stem:[K_i] stem:[(i=1, \dots, N)] を定義する。 +
+  stem:[K_i = \{k | a_k \text{で終わる最長の増加部分列の長さが} i\}] +
+  背理法で証明する。
+  stem:[I_N < \sqrt{N}] と仮定する。
+  stem:[K_i] は以下の性質を持つ。
+  . stem:[1] から stem:[N] までの数はいずれかの stem:[K_i] に含まれる
+  . stem:[i\neq j] なら stem:[K_i \cap K_j = \phi]
+  . stem:[K_{\sqrt{N}}, K_{\sqrt{N}+1}, \dots = \phi] +
+  この時、stem:[K_1, \dots, K_{sqrt{N}-1}] のうち、
+  元の数が stem:[\sqrt{N}] 以上の集合が存在する。
+  この集合の元を集めると、
+  長さが stem:[\sqrt{N}] 以上の減少部分列が得られる。
 
 Proof 2::
-全ての stem:[a_i] を stem:[(i_i, d_i)] でラベル付けする。
-stem:[i_i] は stem:[a_i] で終わる最長の増加部分列の長さ、
-stem:[d_i] は stem:[a_i] で終わる最長の減少部分列の長さである。
-全ての stem:[a_i] について、 #このラベルは一意# である。
-stem:[i_i, d_i < \sqrt{N}] とすると、
-ラベルの数は stem:[(\sqrt{N}-1)^2] 以下に対して、
-数は stem:[N] 個存在する。
-これはラベルの一意性に矛盾する。
+  全ての stem:[a_i] を stem:[(i_i, d_i)] でラベル付けする。
+  stem:[i_i] は stem:[a_i] で終わる最長の増加部分列の長さ、
+  stem:[d_i] は stem:[a_i] で終わる最長の減少部分列の長さである。
+  全ての stem:[a_i] について、 #このラベルは一意# である。
+  stem:[i_i, d_i < \sqrt{N}] とすると、
+  ラベルの数は stem:[(\sqrt{N}-1)^2] 以下に対して、
+  数は stem:[N] 個存在する。
+  これはラベルの一意性に矛盾する。
