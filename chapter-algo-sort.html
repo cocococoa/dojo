@@ -442,7 +442,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
-<body id="index" class="book toc2 toc-left">
+<body id="chapter-algo-sort" class="book toc2 toc-left">
 <div id="header">
 <h1>Dojo</h1>
 <div class="details">
@@ -452,10 +452,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<p><span class="toc-root toc-current"><a href="index.html">Dojo</a></span></p><ul class="sectlevel1">
+<p><span class="toc-root"><a href="index.html">Dojo</a></span></p><ul class="sectlevel1">
 <li><a href="chapter-sample.html">1. サンプル</a>
 </li>
-<li><a href="chapter-algo-sort.html">2. ソート</a>
+<li><a href="chapter-algo-sort.html"><span class="toc-current">2. ソート</span></a>
+<ul class="sectlevel2">
+<li><a href="chapter-algo-sort.html#_増加部分列">2.1. 増加部分列</a>
+</li>
+</ul>
 </li>
 <li><a href="chapter-taocp-4A-7-0.html">3. 7章: 組合せ探索</a>
 </li>
@@ -469,30 +473,86 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
+<div class="sect1">
+<h2 id="chapter-algo-sort">2. ソート</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_増加部分列">2.1. 増加部分列</h3>
+<div class="sect3">
+<h4 id="_erdős_szekeres_の定理">2.1.1. Erdős-Szekeres の定理</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="chapter-sample.html">サンプル</a></p>
+<p>Ref</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Szekeres_theorem">Wikipedia</a></p>
 </li>
 <li>
-<p><a href="chapter-algo-sort.html">ソート</a></p>
+<p><a href="http://www.numdam.org/item/CM_1935" class="bare">http://www.numdam.org/item/CM_1935</a><em>2</em>463_0.pdf[A combinatorial problem in geometry]</p>
 </li>
 <li>
-<p><a href="chapter-taocp-4A-7-0.html">7章: 組合せ探索</a></p>
+<p><a href="http://www-stat.wharton.upenn.edu/~steele/Publications/PDF/VOTMSTOEAS.pdf">Variations on the monotone subsequence theme of Erdős and Szekeres</a></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Statement</dt>
+<dd>
+<p><span class="image"><img src="_images/stem-ed1cbd207a6e5630acafec8d1ce89b74.png" alt="stem ed1cbd207a6e5630acafec8d1ce89b74" width="44" height="10"></span> の整数の順列 <span class="image"><img src="_images/stem-11b189ca3893208e4729641fb735697a.png" alt="stem 11b189ca3893208e4729641fb735697a" width="53" height="8"></span> の最長増加部分列の長さを <span class="image"><img src="_images/stem-88d8a4d40998fa04ac1cec57dfc1d382.png" alt="stem 88d8a4d40998fa04ac1cec57dfc1d382" width="15" height="11"></span> 、
+最長減少部分列の長さを <span class="image"><img src="_images/stem-cc2447235dbdcb8028d2c00a8081c221.png" alt="stem cc2447235dbdcb8028d2c00a8081c221" width="19" height="11"></span> とする。
+<span class="image"><img src="_images/stem-b44e225c469f99d5061b2d14fcd2157a.png" alt="stem b44e225c469f99d5061b2d14fcd2157a" width="118" height="16"></span> である。</p>
+</dd>
+<dt class="hdlist1">Proof 1</dt>
+<dd>
+<p>簡単のため、 <span class="image"><img src="_images/stem-f9c4988898e7f532b9f826a75014ed3c.png" alt="stem f9c4988898e7f532b9f826a75014ed3c" width="12" height="8"></span> は平方数と仮定する。
+以下のような集合 <span class="image"><img src="_images/stem-655ca15e2b101fb431577b12d4442580.png" alt="stem 655ca15e2b101fb431577b12d4442580" width="13" height="11"></span> <span class="image"><img src="_images/stem-dcfa3bec47921be38381e58ad87ca039.png" alt="stem dcfa3bec47921be38381e58ad87ca039" width="72" height="12"></span> を定義する。
+<span class="image"><img src="_images/stem-ca20fd9a101e5ee3e4bbf37eb240d40f.png" alt="stem ca20fd9a101e5ee3e4bbf37eb240d40f" width="5973" height="12"></span>
+背理法で証明する。
+<span class="image"><img src="_images/stem-aaf10bc4d608163af9dd89a1085004be.png" alt="stem aaf10bc4d608163af9dd89a1085004be" width="47" height="16"></span> と仮定する。
+<span class="image"><img src="_images/stem-655ca15e2b101fb431577b12d4442580.png" alt="stem 655ca15e2b101fb431577b12d4442580" width="13" height="11"></span> は以下の性質を持つ。</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><span class="image"><img src="_images/stem-034d0a6be0424bffe9a6e7ac9236c0f5.png" alt="stem 034d0a6be0424bffe9a6e7ac9236c0f5" width="5" height="8"></span> から <span class="image"><img src="_images/stem-f9c4988898e7f532b9f826a75014ed3c.png" alt="stem f9c4988898e7f532b9f826a75014ed3c" width="12" height="8"></span> までの数はいずれかの <span class="image"><img src="_images/stem-655ca15e2b101fb431577b12d4442580.png" alt="stem 655ca15e2b101fb431577b12d4442580" width="13" height="11"></span> に含まれる</p>
 </li>
 <li>
-<p><a href="chapter-taocp-4A-7-1.html">7.1. 零と一</a></p>
+<p><span class="image"><img src="_images/stem-d1a177d007705974655aecd1ffe42d4c.png" alt="stem d1a177d007705974655aecd1ffe42d4c" width="26" height="11"></span> なら <span class="image"><img src="_images/stem-353f0f181348e234beadb01de424838e.png" alt="stem 353f0f181348e234beadb01de424838e" width="66" height="13"></span></p>
 </li>
 <li>
-<p><a href="chapter-art-kabuki.html">歌舞伎</a></p>
+<p><span class="image"><img src="_images/stem-15362ad1d6c3d78cf144feba4fbeb520.png" alt="stem 15362ad1d6c3d78cf144feba4fbeb520" width="121" height="16"></span><br>
+この時、<span class="image"><img src="_images/stem-2ebf66dd27898d717908d84a88c341dd.png" alt="stem 2ebf66dd27898d717908d84a88c341dd" width="95" height="13"></span> のうち、
+元の数が <span class="image"><img src="_images/stem-2ca4b6fa01f356e6a956946f39f08a20.png" alt="stem 2ca4b6fa01f356e6a956946f39f08a20" width="23" height="16"></span> 以上の集合が存在する。
+この集合の元を集めると、
+長さが <span class="image"><img src="_images/stem-2ca4b6fa01f356e6a956946f39f08a20.png" alt="stem 2ca4b6fa01f356e6a956946f39f08a20" width="23" height="16"></span> 以上の減少部分列が得られる。</p>
 </li>
-<li>
-<p><a href="chapter-art-lesson2.html">まなざしのレッスン ②西洋近現代絵画</a></p>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">Proof 2</dt>
+<dd>
+<p>全ての <span class="image"><img src="_images/stem-65ed4b231dcf18a70bae40e50d48c9c0.png" alt="stem 65ed4b231dcf18a70bae40e50d48c9c0" width="10" height="8"></span> を <span class="image"><img src="_images/stem-9e6a4e906a2b1407dd94792863f07415.png" alt="stem 9e6a4e906a2b1407dd94792863f07415" width="33" height="12"></span> でラベル付けする。
+<span class="image"><img src="_images/stem-ebb73e0b22ee8216066dc3ed9339d53c.png" alt="stem ebb73e0b22ee8216066dc3ed9339d53c" width="6" height="11"></span> は <span class="image"><img src="_images/stem-65ed4b231dcf18a70bae40e50d48c9c0.png" alt="stem 65ed4b231dcf18a70bae40e50d48c9c0" width="10" height="8"></span> で終わる最長の増加部分列の長さ、
+<span class="image"><img src="_images/stem-672a7aeac9254219b9609330a12e55e5.png" alt="stem 672a7aeac9254219b9609330a12e55e5" width="11" height="11"></span> は <span class="image"><img src="_images/stem-65ed4b231dcf18a70bae40e50d48c9c0.png" alt="stem 65ed4b231dcf18a70bae40e50d48c9c0" width="10" height="8"></span> で終わる最長の減少部分列の長さである。
+全ての <span class="image"><img src="_images/stem-65ed4b231dcf18a70bae40e50d48c9c0.png" alt="stem 65ed4b231dcf18a70bae40e50d48c9c0" width="10" height="8"></span> について、 <mark>このラベルは一意</mark> である。
+<span class="image"><img src="_images/stem-de16667e5cf8cc1b3681f96c6a466ed2.png" alt="stem de16667e5cf8cc1b3681f96c6a466ed2" width="57" height="16"></span> とすると、
+ラベルの数は <span class="image"><img src="_images/stem-23430b5a1729455a9f2c7a13822f577d.png" alt="stem 23430b5a1729455a9f2c7a13822f577d" width="56" height="16"></span> 以下に対して、
+数は <span class="image"><img src="_images/stem-f9c4988898e7f532b9f826a75014ed3c.png" alt="stem f9c4988898e7f532b9f826a75014ed3c" width="12" height="8"></span> 個存在する。
+これはラベルの一意性に矛盾する。</p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph nav-footer">
-<p>Next: <a href="chapter-sample.html">サンプル</a> →</p>
+<p>← Previous: <a href="chapter-sample.html">サンプル</a> | ↑ Up: <a href="index.html">Dojo</a> | Next: <a href="chapter-taocp-4A-7-0.html">7章: 組合せ探索</a> →</p>
 </div>
 </div>
 <div id="footer">
