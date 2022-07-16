@@ -1,6 +1,40 @@
 [#chapter-algo-sort]
 = ソート
 
+== 内部ソート
+
+=== 挿入ソート
+
+ソート対象レコードはINPUT+1からINPUT+Nまでの領域に格納してある。
+rI1 = j-N, rI2 = i, rA = R = k とする。
+
+.プログラムS
+----
+01 START ENT1 2-N           1
+02 2H    LDA  INPUT+N,1     N-1
+03       ENT2 N-1,1         N-1
+04 3H    CMPA INPUT,2       B+N-1-A
+05       JGE  5F            B+N-1-A
+06 4H    LDX  INPUT,2       B
+07       STX  INPUT+1,2     B
+08       DEC2 1             B
+09       J2P  3B            B
+10 5H    STA  INPUT+1,2     N-1
+11       INC1 1             N-1
+12       J1NP 2B            N-1
+----
+
+* N: ファイルのサイズ
+* A: ステップ4でiを0まで引く回数
+* B: 移動の回数
+
+Bは順列 stem:[K_1, \dots, K_N] に含まれる逆転の合計である。
+プログラムの実行時間で支配的なのはこの stem:[B] である。
+
+=== シェルソート
+
+シェルソートで使う増分数列 stem:[h_{t-1}, \dots, h_{0}] で優れたものを選びたい。
+
 == 増加部分列
 
 === Erdős-Szekeres の定理
