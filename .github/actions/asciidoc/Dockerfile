@@ -10,7 +10,8 @@ RUN apk add --no-cache nodejs yarn python3 jq git py3-pip && \
   gem install asciidoctor-pdf-cjk-kai_gen_gothic && \
   asciidoctor-pdf-cjk-kai_gen_gothic-install
 
+RUN gem install asciidoctor-multipage
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
-

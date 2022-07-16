@@ -8,9 +8,10 @@ asciidoctor \
   -a imagesdir@=$DOCUMENT_DIR/_images \
   -a docroot=$DOCUMENT_DIR \
   -a imagesoutdir=$DIST_DIR/_images \
-  -o $DIST_DIR/index.html \
+  -D $DIST_DIR \
   -r asciidoctor-diagram \
   -r asciidoctor-mathematical \
-  -b html \
+  -r asciidoctor-multipage \
+  -b multipage_html5 \
   $DOCUMENT_DIR/index.adoc
 cp -r $DOCUMENT_DIR/_images/* $DIST_DIR/_images/
