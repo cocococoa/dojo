@@ -476,6 +476,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="taocp-4A-5-2">2.1. 内部ソート</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>挿入ソート</p>
+</li>
+<li>
+<p>交換ソート</p>
+</li>
+<li>
+<p>選択ソート</p>
+</li>
+<li>
+<p>数え上げソート</p>
+</li>
+<li>
+<p>特別な目的別のソート</p>
+</li>
+<li>
+<p>怠け者の方法</p>
+</li>
+<li>
+<p>新しい優れたソート手法</p>
+</li>
+</ol>
+</div>
 <div class="sect3">
 <h4 id="_挿入ソート">2.1.1. 挿入ソート</h4>
 <div class="paragraph">
@@ -550,7 +575,7 @@ rI1 = j-N, rI2 = i, rA = R = k とする。</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="_images/stem-e7e597b06bbdf10bf7d2e5d2ed6de9ad.png" alt="$$\lfloor n/2 \rfloow 2^{n-2} / \binom{n}{\lfloor n/2 \rfloor} \approx 0.15 n^{3/2}$$" width="223" height="26">
+<img src="_images/stem-5d04501bb0bf6e1408b845e02964a1bd.png" alt="$$\lfloor n/2 \rfloor 2^{n-2} / \binom{n}{\lfloor n/2 \rfloor} \approx 0.15 n^{3/2}$$" width="187" height="26">
 </div>
 </div>
 <div class="dlist">
@@ -559,9 +584,25 @@ rI1 = j-N, rI2 = i, rA = R = k とする。</p>
 <dd>
 <p><span class="image"><img src="_images/stem-fc9e688db5d00b3c82aab0ceca1c0d7a.png" alt="stem fc9e688db5d00b3c82aab0ceca1c0d7a" width="50" height="12"></span> の <span class="image"><img src="_images/stem-2ad9d098b937e46f9f58968551adac57.png" alt="stem 2ad9d098b937e46f9f58968551adac57" width="7" height="9"></span> ソート済み順列に含む逆転の平均は、
 <span class="image"><img src="_images/stem-a3dd51ca2d9fc12e5576152bd373267e.png" alt="stem a3dd51ca2d9fc12e5576152bd373267e" width="53" height="10"></span> で <span class="image"><img src="_images/stem-369352e297ddeecab6f7f3bfda8ce597.png" alt="stem 369352e297ddeecab6f7f3bfda8ce597" width="63" height="9"></span> とすると、次のようになる。<br>
-<span class="image"><img src="_images/stem-7ba3f745ec739dd7f871eb2980cf09f4.png" alt="stem 7ba3f745ec739dd7f871eb2980cf09f4" width="341" height="24"></span></p>
+<span class="image"><img src="_images/stem-66215b3a26bf63b727e890938269fdba.png" alt="stem 66215b3a26bf63b727e890938269fdba" width="309" height="24"></span></p>
 </dd>
 </dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_リスト挿入">2.1.3. リスト挿入</h4>
+<div class="paragraph">
+<p>直接挿入は次の二つの基本操作を含んでいる</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>与えられたキー以下で最大のキーを見つけるために、ソート済みファイルを操作する</p>
+</li>
+<li>
+<p>ソート済みファイルの指定した位置に新しいレコードを挿入する</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -788,7 +829,7 @@ empty
 <div id="footer">
 <div id="footer-text">
 Version 0.0<br>
-Last updated 2022-07-16 11:51:40 UTC
+Last updated 2022-07-16 12:07:36 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
