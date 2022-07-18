@@ -24,6 +24,8 @@ include::taocp/_taocp.adoc[leveloffset=+1]
 
 include::cuda/_cuda.adoc[leveloffset=+1]
 
+include::movie/_movie.adoc[leveloffset=+1]
+
 include::art/_art.adoc[leveloffset=+1]
 
 (END OF DOCUMENT)

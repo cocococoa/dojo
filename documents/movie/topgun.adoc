@@ -1,0 +1,7 @@
+[#movie-topgun]
+= Top Gun
+
+|===
+|Date|Director|Starring
+|1986/05/16|Tony Scott|Tom Cruise, Kelly McGillis, Val Kilmer, Anthony Edwards, Tom Skerritt
+|===
